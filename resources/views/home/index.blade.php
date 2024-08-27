@@ -3,5 +3,6 @@
 @section('titulo', 'Home')
 
 @section('conteudo')
-    <h1>Você está no Home</h1>
+<img class="oculto" src="" alt="">
+   @include('home.create')
 @endsection

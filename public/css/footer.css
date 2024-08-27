@@ -1,0 +1,26 @@
+footer, footer div{
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 2em;
+    color: var(--cinza);
+}
+
+footer div{
+    gap: 10px;
+}
+
+footer img{
+    width: 20px;
+}
+
+#linkFooter{
+    text-decoration: none;
+    color: var(--cinza);
+}
