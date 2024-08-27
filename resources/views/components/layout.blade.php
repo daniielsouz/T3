@@ -9,6 +9,5 @@
 <body>
     @include('components.header')
     @yield('conteudo')
-
 </body>
 </html>

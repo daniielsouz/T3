@@ -21,3 +21,11 @@ Route::get('/historico', function(){
 Route::get('/suporte', function(){
     return view('suporte.index');
 });
+
+Route::get('/login', function (){
+    return view('login.index');
+});
+
+Route::get('/cadastro', function(){
+    return view('cadastro.index');
+});
