@@ -1,0 +1,18 @@
+@import url('reset.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
+
+:root{
+    --fundo-degrade :linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,122,1) 83%);
+    --branco: #fff;
+    --cinza:#5c5a5a;
+}
+.oculto{
+    display: none;
+}
+
+body{
+    background: var(--fundo-degrade) ;
+    height: 100vh;
+}

@@ -1,0 +1,52 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+header div{
+    display: flex;
+    align-items: center; 
+    gap: 1em;
+}
+
+
+header div span{
+    color:var(--branco)
+}
+
+#logoT3{
+    width:150px;
+    margin-left: 10px;
+}
+#menuHamburguer{
+    padding: 1em;
+    display: block;
+    cursor: pointer;
+    color: var(--branco);
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+  }
+
+.navLinks{
+    text-decoration: none;
+    color: var(--branco);               
+}
+
+#navLista{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 15em;
+    background-color:var(--cinza);
+    border-radius:0 25px 25px 0;
+    padding: 1em;
+
+}
+
+

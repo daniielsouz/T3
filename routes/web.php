@@ -1,15 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProviderPlacas;
 use App\Http\Controllers\ControllerHistorico;
 
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.index');
 });
 
-Route::get('/teste', [ProviderPlacas::class , 'ProviderPlacas']);
 
 Route::get('/home', function(){
     return view('home.index');
