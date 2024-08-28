@@ -12,9 +12,7 @@
 <body>
     @include('components.header')
     @yield('conteudo')
-<<<<<<< HEAD
-=======
     @include('components.footer')
->>>>>>> 2bcf87eff603ac0b3a7b51945956439cdf607e03
+
 </body>
 </html>

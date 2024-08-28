@@ -1,14 +1,14 @@
-/* Estilo geral para o formulário */
+
 .form {
     text-align: center;
-    background: rgba(116, 114, 114, 0.8); /* Fundo semi-transparente */
+    background: rgba(116, 114, 114, 0.8); 
     border-radius: 10px; 
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     max-width: 500px;
     width: 100%;
     margin: 10px;
-    box-sizing: border-box; /* Inclui padding e borda no width total */
+    box-sizing: border-box; 
 }
 
 
@@ -24,7 +24,7 @@
 }
 
 
-button {
+.botao {
     background: rgba(0, 0, 0, 0.308);
     color: white;
     border: none;
@@ -37,13 +37,15 @@ button {
 }
 
 
-button:hover {
+.botao:hover {
     background: rgba(0, 0, 122, 0.404); 
     transform: scale(1.05); 
 }
-
-/* Efeito ao focar os botões */
-button:focus {
+.botao:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+}
+
+.btnCancelar:hover{
+    background: rgba(255, 2, 2, 0.404)
 }

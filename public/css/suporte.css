@@ -1,0 +1,42 @@
+ul{
+    color: var(--branco);
+}
+
+.divDuvida{
+    background: var(--cinza);
+    margin: 2em 6em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.tituloDuvida{
+    cursor: pointer;
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.listaDuvida{
+    text-align: center;
+    margin: px;
+}
+
+.listaDuvida li{
+    margin: 10px;
+    list-style: circle;
+    list-style-position: inside ;
+}
+#tituloEmail{
+    color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em;
+}
+#formDuvidas{
+    display: flex;
+    justify-content: center;
+}
+
+#formDuvidas textarea {
+    resize: none;
+}

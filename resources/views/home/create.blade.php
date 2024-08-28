@@ -9,18 +9,18 @@
             </select>
             <input class="inputs" type="text" placeholder="Destino inicial" required>
             <input class="inputs" type="text" placeholder="Destino final" required>
-            <button type="submit">Adicionar Viagem</button>
+            <button class="botao" type="submit">Adicionar Viagem</button>
         </form>
         <div>
-                <button>Criar cadastro de Placa</button>
-                <button>Remover Placa</button>
+                <button class="botao">Criar cadastro de Placa</button>
+                <button class="botao">Remover Placa</button>
             </div>
     </div>
     <div class="form">
         <form  action="post">
         @csrf
             <input class="inputs" type="text" min-legth='6' max-length='7' required placeholder='Informe o numero da placa'>
-            <button type="submit">Adicionar Placa</button>
+            <button class="botao" type="submit">Adicionar Placa</button>
         </form>
     <button class="btnCancelar">Cancelar</button>
     </div>
