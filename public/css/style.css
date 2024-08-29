@@ -10,19 +10,6 @@
     --branco: #fff;
     --cinza:rgba(116, 114, 114, 0.8);
 }
-.oculto {
-    opacity: 0;
-    max-height: 0; /* Usa max-height em vez de height */
-    overflow: hidden;
-    transition: opacity 2s ease, max-height 2s ease;
-}
-
-.oculto.visible {
-    opacity: 1;
-    max-height: 500px;
-}
-
-
 body{
     background: var(--fundo-degrade) ;
     height: 100%;
@@ -31,3 +18,47 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+
+.oculto {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.oculto.open {
+    animation: abrir 0.5s ease-in-out forwards;
+}
+
+
+.oculto.closed {
+    animation: fechar 0.5s ease-in-out forwards; 
+}
+
+
+@keyframes abrir {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px; 
+        opacity: 1;
+    }
+}
+
+
+@keyframes fechar {
+    from {
+        max-height: 500px; 
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+
+

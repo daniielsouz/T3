@@ -1,29 +1,36 @@
+// Menu Hamburguer
 const menu = document.querySelector('#menuHamburguer');
 const navegador = document.querySelector('.navegador');
 
 menu.addEventListener('click', () => {
   navegador.classList.toggle('oculto');
-
-  
 });
 
 
-
-// Daqui pra baixo é sobre o suporte 
-
+// Daqui pra baixo é suporte
 const titulosDiv = document.querySelectorAll('.tituloDuvida');
 
 titulosDiv.forEach(i => {
   i.addEventListener('click', () => {
-    const targetId = i.getAttribute('data-target');
-    const divOculta = document.getElementById(`${targetId}`);
-    divOculta.classList.toggle('oculto');
-    const img = i.parentElement.querySelector('.imagemDuvida');
-    console.log(img);
-    if (divOculta.classList.contains('oculto')) {
-      img.src = 'img/iconFechado.svg'; // Imagem quando a div está oculta
+    const buscarId = i.getAttribute('data-target');
+    const divOculta = document.getElementById(buscarId);
+    function transicao (){
+      
+    }    
+    if (divOculta.classList.contains('open')) {
+      divOculta.classList.remove('open');
+      divOculta.classList.add('closed');
     } else {
-      img.src = 'img/iconAberto.svg'; // Imagem quando a div está visível (ajuste o caminho conforme necessário)
+      divOculta.classList.remove('closed');
+      divOculta.classList.add('open');
+    }
+
+    
+    const img = i.parentElement.querySelector('.imagemDuvida');
+    if (divOculta.classList.contains('open')) {
+      img.src = 'img/iconAberto.svg'; 
+    } else {
+      img.src = 'img/iconFechado.svg'; 
     }
   });
 });
