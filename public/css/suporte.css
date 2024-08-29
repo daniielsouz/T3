@@ -3,11 +3,14 @@ ul{
 }
 
 .divDuvida{
-    background: var(--cinza);
-    margin: 2em 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 1em;
     border-radius: 10px;
 }
+
 
 .tituloDuvida{
     cursor: pointer;
@@ -18,7 +21,7 @@ ul{
 }
 .listaDuvida{
     text-align: center;
-    margin: px;
+    max-width: 500px;
 }
 
 .listaDuvida li{
@@ -32,9 +35,10 @@ ul{
     text-transform: uppercase;
     margin: 1em;
 }
-#formDuvidas{
+#formDuvidas, .divDuvidaTitulo{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #formDuvidas textarea {

@@ -24,7 +24,7 @@
 }
 
 
-.botao {
+.botao, .btnCancelar {
     background: rgba(0, 0, 0, 0.308);
     color: white;
     border: none;
@@ -47,5 +47,6 @@
 }
 
 .btnCancelar:hover{
-    background: rgba(255, 2, 2, 0.404)
+    background: rgba(255, 2, 2, 0.404);
+    transform: scale(1.05); 
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerHistorico;
+use App\Http\Controllers\ControllerSuporte;
 
 Route::get('/', function () {
     return view('login.index');
@@ -13,10 +14,7 @@ Route::get('/home', function(){
 });
 
 Route::get('/historico', [ControllerHistorico::class, 'index']);
-
-Route::get('/suporte', function(){
-    return view('suporte.index');
-});
+Route::get('/suporte', [ControllerSuporte::class, 'index']);
 
 Route::get('/login', function (){
     return view('login.index');
@@ -25,3 +23,7 @@ Route::get('/login', function (){
 Route::get('/cadastro', function(){
     return view('cadastro.index');
 });
+
+
+
+

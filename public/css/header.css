@@ -35,7 +35,8 @@ header div span{
 
 .navLinks{
     text-decoration: none;
-    color: var(--branco);               
+    color: var(--branco);   
+    font-weight: bold;            
 }
 
 #navLista{

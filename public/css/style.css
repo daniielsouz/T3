@@ -10,12 +10,18 @@
     --branco: #fff;
     --cinza:rgba(116, 114, 114, 0.8);
 }
-.oculto{
+.oculto {
     opacity: 0;
-    height: 0;
+    max-height: 0; /* Usa max-height em vez de height */
     overflow: hidden;
-    transition: opacity 2s ease, height 2s ease;
+    transition: opacity 2s ease, max-height 2s ease;
 }
+
+.oculto.visible {
+    opacity: 1;
+    max-height: 500px;
+}
+
 
 body{
     background: var(--fundo-degrade) ;
