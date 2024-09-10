@@ -1,18 +1,25 @@
-footer{
-    padding: 2em;
+footer {
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
     color: var(--branco);
+    background-color: var(--cinza);
+    gap: 10px;
+    font-size: 10px;
 }
 
-footer img{
-    width: 20px;
+footer img {
+    width: 15px;
 }
 
-#divContato{
+#divContato {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-#linkFooter{
+
+#linkFooter {
     text-decoration: none;
     color: var(--branco);
 }

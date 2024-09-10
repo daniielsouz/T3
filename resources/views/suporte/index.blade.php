@@ -1,6 +1,9 @@
 @extends('components.layout')
 
 @section('titulo', 'Suporte')
+@push('scripts')
+<script src="{{ asset('js/suporte.js') }}" defer></script>
+@endpush
 
 @section('conteudo')
     @foreach ($duvidas as $i)
@@ -9,13 +12,12 @@
                 <h3 class="tituloDuvida" data-target="container{{ $loop->iteration }}">{{ $i['duvida'] }}</h3>
                 <img class='imagemDuvida' src="img/iconFechado.svg" alt="">
             </div>
-            <div class="oculto" id="container{{ $loop->iteration }}">
-                <ul class="listaDuvida">
+                <ul class="listaDuvida oculto " id="container{{ $loop->iteration }}">
                     @foreach ($i['resposta'] as $resposta)
                         <li>{!! $resposta !!}</li>
                     @endforeach
                 </ul>
-            </div>
+          
         </div>
     @endforeach
 

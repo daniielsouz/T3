@@ -4,4 +4,5 @@
         <img src="/img/icon-whats.svg" alt="">
     </div>
     <a href="/suporte" id="linkFooter">Suporte</a>
+    <span>&copy; 2024 T3</span>
 </footer>

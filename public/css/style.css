@@ -5,37 +5,44 @@
 @import url('home.css');
 @import url('suporte.css');
 
-:root{
-    --fundo-degrade :linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,122,1) 83%);
+:root {
+    --fundo-degrade: linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,122,1) 83%);
     --branco: #fff;
-    --cinza:rgba(116, 114, 114, 0.8);
+    --cinza: rgba(116, 114, 114, 0.8);
 }
-body{
-    background: var(--fundo-degrade) ;
-    height: 100%;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+    background: var(--fundo-degrade);
     font-family: "Exo", sans-serif;
-    font-size: 16;
+    font-size: 16px; 
     font-weight: 400;
     font-style: normal;
+}
+
+main {
+    min-height: calc(100vh - 10vh);
+    overflow: auto;
+    padding-bottom: 5vh; 
 }
 
 .oculto {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-
-.oculto.open {
+.oculto.aberto {
     animation: abrir 0.5s ease-in-out forwards;
 }
 
-
-.oculto.closed {
-    animation: fechar 0.5s ease-in-out forwards; 
+.oculto.fechado {
+    animation: fechar 0.5s ease-in-out forwards;
 }
-
 
 @keyframes abrir {
     from {
@@ -48,7 +55,6 @@ body{
     }
 }
 
-
 @keyframes fechar {
     from {
         max-height: 500px; 
@@ -59,6 +65,3 @@ body{
         opacity: 0;
     }
 }
-
-
-

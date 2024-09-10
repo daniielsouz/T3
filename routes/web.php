@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ControllerHome;
 use App\Http\Controllers\ControllerHistorico;
 use App\Http\Controllers\ControllerSuporte;
 
@@ -9,9 +10,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', function(){
-    return view('home.index');
-});
+Route::get('/home', [ControllerHome::class,'index']);
 
 Route::get('/historico', [ControllerHistorico::class, 'index']);
 Route::get('/suporte', [ControllerSuporte::class, 'index']);

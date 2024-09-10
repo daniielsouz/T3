@@ -22,10 +22,13 @@ class ControllerSuporte extends Controller
                     'O campo da placa está correto? EX: BRA2E13',
                     'O campo da placa está correto? EX: BRA2E13'
                 ]
-            ]
-            // Outras duvidas...
-            
-        ];
+                ],
+                ['duvida' => 'Posso adicionar placas de outros países ?',
+                'resposta' => [
+
+                    'Sim, você pode adicionar placas de outros países, basta verificar se o número da placa é válido e corresponde ao padrão do país.']
+                ]
+                ];
 
         return view('suporte.index', ['duvidas' => $duvidas,]);
     }

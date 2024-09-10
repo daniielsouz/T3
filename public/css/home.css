@@ -1,14 +1,27 @@
+#divPrincipalHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.tabelaViagens{
+    display: flex;
+    margin: 10px; 
+}
 
+.tituloViagens{
+    border: 1px white solid;
+    padding: 10px 20px;
+}
 .form {
     text-align: center;
     background: rgba(116, 114, 114, 0.8); 
     border-radius: 10px; 
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-    max-width: 500px;
-    width: 100%;
-    margin: 10px;
+    width: calc(100% - 20px);
     box-sizing: border-box; 
+    margin: 10px;
 }
 
 

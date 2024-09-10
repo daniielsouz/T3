@@ -1,3 +1,4 @@
+<script src="{{ asset('js/header.js') }}" defer></script>
 <header >
     <div>
         <a href="/home"><img id="logoT3" src="/img/icon.jpeg" alt="logo T3 frotas" ></a>
@@ -15,3 +16,4 @@
         <span>Bem vindo, Usuarío</span>
     </div>
 </header>
+    

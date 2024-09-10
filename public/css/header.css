@@ -1,27 +1,26 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
-    
     padding: 1em;
-    margin-bottom: 2em;
+    height: 5vh;
 }
 
-header div{
+header div {
     display: flex;
     align-items: center; 
     gap: 1em;
 }
 
-
-header div span{
-    color:var(--branco)
+header div span {
+    color: var(--branco);
 }
 
-#logoT3{
-    width:150px;
+#logoT3 {
+    width: 150px;
     margin-left: 10px;
 }
-#menuHamburguer{
+
+#menuHamburguer {
     padding: 1em;
     display: block;
     cursor: pointer;
@@ -31,23 +30,20 @@ header div span{
 .navegador {
     display: flex;
     align-items: center;
-  }
+}
 
-.navLinks{
+.navLinks {
     text-decoration: none;
     color: var(--branco);   
     font-weight: bold;            
 }
 
-#navLista{
+#navLista {
     display: flex;
     justify-content: center;
     gap: 1em;
     width: 15em;
-    background-color:var(--cinza);
-    border-radius:0 25px 25px 0;
+    background-color: var(--cinza);
+    border-radius: 0 25px 25px 0;
     padding: 1em;
-
 }
-
-
