@@ -15,23 +15,33 @@
    <div class="" id="div2">
       <ul class="tabelaViagens">
          @foreach ($titulosTabela as $i)
-            <li class="tituloViagens">{{$i}}</li>
+         <li class="tituloViagens">{{$i}}</li>
          @endforeach
       </ul>
+      @foreach ($viagens as $i)
+      <ul class="tabelaViagens" name='{{$i->id}}'>
+         <li class="tituloViagens">{{$i->dataViagem}}</li>
+         <li class="tituloViagens">{{$i->motorista}}</li>
+         <li class="tituloViagens">{{$i->placa}}</li>
+         <li class="tituloViagens">{{$i->destinoInicial}}</li>
+         <li class="tituloViagens">{{$i->destinoFinal}}</li>
+         <button class="botao">Informar retorno</button>
+      </ul>
+      @endforeach
    </div>
    <div class="form " id="div3">
-      <form action="" method="POST">
+      <form action="{{route ('viagens.store')}}" method="POST">
          @csrf
-         <input class="inputs" type="date" id="dataViagem" required>
-         <input class="inputs" type="text" placeholder="Motorista" required>
-         <select class="inputs" name="placa_id" id="opcoesPlaca" required>
+         <input class="inputs" type="date" name="dataViagem" id="dataViagem" required>
+         <input class="inputs" type="text" name='motorista' placeholder="Motorista" required>
+         <select class="inputs" name="opcoesPlaca" id="opcoesPlaca" required>
             <option value="" disabled selected>Placas Cadastradas</option>
             @foreach ($placas as $i)
-               <option value="{{$i->id }}">{{ $i->num_placa }}</option>
+               <option value="{{$i->num_placa }}">{{ $i->num_placa }}</option>
             @endforeach
          </select>
-         <input class="inputs" type="text" placeholder="Destino inicial" required>
-         <input class="inputs" type="text" placeholder="Destino final" required>
+         <input class="inputs" type="text" name='destinoInicial' placeholder="Destino inicial" required>
+         <input class="inputs" type="text" name='destinoFinal' placeholder="Destino final" required>
          <button class="botao" type="submit">Adicionar Viagem</button>
       </form>
       <div>
