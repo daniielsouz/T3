@@ -9,4 +9,9 @@ class Placa extends Model
 {
     use HasFactory;
     protected $fillable = ['num_placa'];
+
+    public function setNumPlacaAttribute($value)
+    {
+        $this->attributes['num_placa'] = strtoupper($value);
+    }
 }

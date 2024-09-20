@@ -7,6 +7,12 @@
 .tabelaViagens{
     display: flex;
     margin: 10px; 
+    align-items: center;
+}
+
+.tabelaViagens img:hover{
+    scale: 1.2;
+    cursor: pointer;
 }
 
 .tituloViagens{

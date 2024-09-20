@@ -25,7 +25,8 @@
          <li class="tituloViagens">{{$i->placa}}</li>
          <li class="tituloViagens">{{$i->destinoInicial}}</li>
          <li class="tituloViagens">{{$i->destinoFinal}}</li>
-         <button class="botao">Informar retorno</button>
+         <li><img src="/img/iconRetorno.svg" alt=""></li>
+         <li><img src="/img/iconExcluirViagem.svg" alt=""></li>
       </ul>
       @endforeach
    </div>
@@ -40,7 +41,7 @@
                <option value="{{$i->num_placa }}">{{ $i->num_placa }}</option>
             @endforeach
          </select>
-         <input class="inputs" type="text" name='destinoInicial' placeholder="Destino inicial" required>
+         <input class="inputs" id="destinoFinal" type="text" name='destinoInicial' placeholder="Destino inicial" required>
          <input class="inputs" type="text" name='destinoFinal' placeholder="Destino final" required>
          <button class="botao" type="submit">Adicionar Viagem</button>
       </form>
