@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('placas', function (Blueprint $table) {
             $table->id();
             $table->string('num_placa')->unique();
+            $table->integer('status');
             $table->timestamps();
         });
     }

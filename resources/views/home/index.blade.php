@@ -30,7 +30,7 @@
       </ul>
       @endforeach
    </div>
-   <div class="form " id="div3">
+   <div class="form" id="div3">
       <form action="{{route ('viagens.store')}}" method="POST">
          @csrf
          <input class="inputs" type="date" name="dataViagem" id="dataViagem" required>
@@ -38,7 +38,11 @@
          <select class="inputs" name="opcoesPlaca" id="opcoesPlaca" required>
             <option value="" disabled selected>Placas Cadastradas</option>
             @foreach ($placas as $i)
-               <option value="{{$i->num_placa }}">{{ $i->num_placa }}</option>
+               @if($i->status == 0)
+                  <option value="{{$i->num_placa }}">{{ $i->num_placa }}</option>
+               @else
+                  <option value="{{$i->num_placa }}" select disabled>{{ $i->num_placa }}</option>
+               @endif
             @endforeach
          </select>
          <input class="inputs" id="destinoFinal" type="text" name='destinoInicial' placeholder="Destino inicial" required>
@@ -50,7 +54,7 @@
          <a href="" class="botao">Remover Placa</a>
       </div>
    </div>
-   <div class="form " id="div4">
+   <div class="form" id="div4">
       <form action="{{ route('placas.store') }}" method="POST">
          @csrf
          <input class="inputs" type="text" minlength="7" maxlength="7" name="num_placa" required placeholder="Informe o número da placa">

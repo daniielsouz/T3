@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Viagens;
+use App\Models\Placa;
 
 class ControllerViagens extends Controller
 {
@@ -17,6 +18,11 @@ class ControllerViagens extends Controller
             'destinoInicial' => $request->input('destinoInicial'),
             'destinoFinal' => $request->input('destinoFinal')
         ]);
+
+        $placaViajando = $request->input('opcoesPlaca');
+        $placa = Placa::where('num_placa', $placaViajando)->first();
+        $placa->status = '1';
+        $placa->save();
 
         if ($viagens){
             return redirect()->route('home')->with('message', 'Viagem adicionada com sucesso!');

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Placa extends Model
 {
     use HasFactory;
-    protected $fillable = ['num_placa'];
+    protected $fillable = ['num_placa','status'];
 
     public function setNumPlacaAttribute($value)
     {

@@ -14,6 +14,7 @@ class ControllerPlacas extends Controller
 
         $placa = Placa::create([
             'num_placa' => $request->input('num_placa'),
+            'status' => 0
         ]);
 
         if ($placa) {
