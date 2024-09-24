@@ -27,3 +27,4 @@ Route::get('/cadastro', function(){
 Route::post('/placas', [ControllerPlacas::class, 'store'])->name('placas.store');
 Route::post('/viagens', [ControllerViagens::class, 'store'])->name('viagens.store');
 
+Route::delete('/viagens/{id}', [ControllerViagens::class, 'destroy'])->name('viagens.destroy');

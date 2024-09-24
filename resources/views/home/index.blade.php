@@ -19,14 +19,22 @@
          @endforeach
       </ul>
       @foreach ($viagens as $i)
-      <ul class="tabelaViagens" name='{{$i->id}}'>
+      <ul class="tabelaViagens" data-id=""='{{$i->id}}'>
          <li class="tituloViagens">{{$i->dataViagem}}</li>
          <li class="tituloViagens">{{$i->motorista}}</li>
          <li class="tituloViagens">{{$i->placa}}</li>
          <li class="tituloViagens">{{$i->destinoInicial}}</li>
          <li class="tituloViagens">{{$i->destinoFinal}}</li>
          <li><img src="/img/iconRetorno.svg" alt=""></li>
-         <li><img src="/img/iconExcluirViagem.svg" alt=""></li>
+         <form action="{{route('viagens.destroy',$i->id)}}" method="POST">
+            <li>
+            @csrf
+            @method('DELETE')
+               <button type="submit" onclick="return confirm('Tem certeza que deseja excluir está viagem?')">
+                  <img src="/img/iconExcluirViagem.svg" alt="">
+               </button>
+            </li>
+         </form>
       </ul>
       @endforeach
    </div>

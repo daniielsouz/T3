@@ -30,6 +30,22 @@ class ControllerViagens extends Controller
             return redirect()->route('home')->with('error', 'Não foi possível adicionar a viagem.');
         }
     }
-
- 
+    public function destroy($id)
+    {
+        $viagem = Viagens::find($id);
+    
+        if ($viagem) {
+            $placa = Placa::where('num_placa', $viagem->placa)->first();
+            if ($placa) {
+                $placa->status = '0'; 
+                $placa->save();
+            }
+    
+            $viagem->delete();
+            return redirect()->route('home')->with('message', 'Viagem excluída com sucesso!');
+        } else {
+            return redirect()->route('home')->withErrors(['error' => 'Viagem não encontrada.']);
+        }
+    
+    }
 }
