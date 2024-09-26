@@ -28,3 +28,5 @@ Route::post('/placas', [ControllerPlacas::class, 'store'])->name('placas.store')
 Route::post('/viagens', [ControllerViagens::class, 'store'])->name('viagens.store');
 
 Route::delete('/viagens/{id}', [ControllerViagens::class, 'destroy'])->name('viagens.destroy');
+Route::delete('/placas/{id}', [ControllerPlacas::class, 'destroy'])->name('placas.destroy');
+Route::post('/historico/retorno/{id}', [ControllerHistorico::class, 'store'])->name('historico.store');

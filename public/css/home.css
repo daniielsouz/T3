@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.tabelaViagens img:hover{
+.imgHome:hover{
     scale: 1.2;
     cursor: pointer;
 }

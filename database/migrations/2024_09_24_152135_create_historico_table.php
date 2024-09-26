@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('viagens', function (Blueprint $table) {
+        Schema::create('historico', function (Blueprint $table) {
             $table->id();
             $table->date('dataViagem');
             $table->string('motorista');
             $table->string('placa');
             $table->string('destinoInicial');
             $table->string('destinoFinal');
+            $table->date('dataRetorno');
+            $table->string('observacoes');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('viagens');
+        Schema::dropIfExists('historico');
     }
 };

@@ -25,13 +25,19 @@
          <li class="tituloViagens">{{$i->placa}}</li>
          <li class="tituloViagens">{{$i->destinoInicial}}</li>
          <li class="tituloViagens">{{$i->destinoFinal}}</li>
-         <li><img src="/img/iconRetorno.svg" alt=""></li>
+         <form action="{{ route('historico.store', $i->id) }}" method="POST">
+            @csrf
+            <button style="background: none; border:none;" type="submit">
+               <img class="imgHome" src="/img/iconRetorno.svg" title="Informar retorno da viagem" alt="Informar retorno da viagem">
+            </button>
+         </form>
+
          <form action="{{route('viagens.destroy',$i->id)}}" method="POST">
             <li>
             @csrf
             @method('DELETE')
-               <button type="submit" onclick="return confirm('Tem certeza que deseja excluir está viagem?')">
-                  <img src="/img/iconExcluirViagem.svg" alt="">
+               <button style="background: none; border:none;" type="submit" onclick="return confirm('Tem certeza que deseja excluir está viagem?')">
+                  <img class="imgHome" src="/img/iconExcluirViagem.svg" title="Excluir viagem" alt="Excluir viagem">
                </button>
             </li>
          </form>
@@ -63,11 +69,25 @@
       </div>
    </div>
    <div class="form" id="div4">
-      <form action="{{ route('placas.store') }}" method="POST">
+      <form action="{{route('placas.store')}}" method="POST">
          @csrf
          <input class="inputs" type="text" minlength="7" maxlength="7" name="num_placa" required placeholder="Informe o número da placa">
          <button class="botao" type="submit">Adicionar Placa</button>
       </form>
+   </div>
+   <div>
+      <ul>   
+         @foreach($placasRemocao as $i)
+         <form action="{{route('placas.destroy', $i->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <li data-id='{{$i->id}}'>{{$i->num_placa}}</li>
+            <button style="background: none; border:none;" type="submit" onclick="return confirm('Tem certeza que deseja excluir está placa?')">
+               <img class="imgHome" src="/img/iconExcluirViagem.svg" title="Excluir placa" alt="Excluir placa">
+            </button>
+         </form>
+         @endforeach
+      </ul>
    </div>
 </div>
 @endsection
